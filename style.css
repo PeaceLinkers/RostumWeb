@@ -1,0 +1,419 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0e0e;
+  color: #fff;
+}
+
+header {
+  background: #222;
+  padding: 20px 20px 40px; /* Extra bottom padding */
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  margin-top: 20px; /* spacing from logo/title */
+}
+header h1 {
+  
+  font-size: 3.5rem; /* Increase this value to make it bigger */
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem; /* Adjust the size here */
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #8a1313;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  background: transparent; /* Transparent background */
+  border: 1px solid #888;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+
+}
+
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #9e1f1faf;
+  border: none;
+  border-radius: 5px;
+  color: #0f0e0e;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #701010;
+}
+
+#music {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spotify-embed {
+  width: 100%;
+  max-width: 6000px;
+  margin: 0 auto 40px;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.spotify-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+
+
+.spotify-albums {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.album {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.album img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.album .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.album:hover .overlay {
+  opacity: 1;
+}
+
+.album .overlay img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+}
+
+
+#music {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1000px; /* limit width for better layout */
+  margin: auto;
+}
+
+/* Container for all tracks */
+.tracks-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px; /* space between tracks */
+  justify-items: center; /* center items horizontally */
+}
+
+/* Individual track style */
+.track {
+  width: 100%;
+  max-width: 300px; /* control thumbnail and audio size */
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Thumbnail styling */
+.track-thumbnail {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.track-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(151, 16, 16, 0.4);
+}
+
+/* Audio player */
+.track audio {
+  width: 100%;
+  margin: 15px 0 10px;
+  display: block;
+}
+
+/* Description */
+.track .description {
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+}
+
+
+
+#about {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.animated-intro {
+  font-size: 1.2rem;
+  color: #444;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.about-photo {
+  margin: 30px auto;
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-paragraph {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#gallery {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+#gallery h2 {
+  width: 25%;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.gallery-item {
+  display: inline-block;
+  margin: 15px;
+  max-width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+
+
+.caption {
+  color: #bbb;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+/* Underline main section headers */
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Subtitle style for Spotify and My Tracks */
+.section-subtitle {
+  font-size: 1.2rem;
+  margin: 40px 0 20px;
+  text-decoration: none;
+  text-underline-offset: 6px;
+}
+
+#socials {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#socials h2 {
+  font-size: 2rem;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1); /* Makes them white on dark backgrounds */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: invert(1) brightness(1.4);
+}
+
+header {
+  background-image: url('assets/bg.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: white; /* make text visible on background */
+  text-align: center;
+  position: relative;
+}
+
+/* Optional: add a dark overlay for better text contrast */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
