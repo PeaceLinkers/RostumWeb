@@ -394,7 +394,7 @@ section h2::after {
 }
 
 header {
-  background-image: url('assets/bg.jpg'); /* replace with your image path */
+  background-image: url('bg.jpg'); /* replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
