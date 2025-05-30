@@ -19,3 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bg-music");
+
+  function enableAudio() {
+    audio.play().catch((error) => {
+      console.log("Autoplay failed:", error);
+    });
+
+    // Only run once
+    window.removeEventListener("click", enableAudio);
+  }
+
+  // Start audio on first click anywhere
+  window.addEventListener("click", enableAudio);
+});
